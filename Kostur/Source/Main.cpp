@@ -242,7 +242,7 @@ int main() {
                 default: cTex = 0;
                 }
 
-                float r = 1, g = 1, b = 1,g;
+                float r = 1, g = 1, b = 1;
 
                 if (curIng == PATTY) { r = pattyCol[0]; g = pattyCol[1]; b = pattyCol[2]; }
                 drawQ(shader, cTex, ingX, ingY, w, h, r, g, b, 1, flip);
