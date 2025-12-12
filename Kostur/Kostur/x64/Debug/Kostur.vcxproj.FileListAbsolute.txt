@@ -1,0 +1,2 @@
+C:\Users\Vuk\Documents\Vasa\Grafika\RG_V4\Kostur\x64\Debug\glew32.dll
+C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\Kostur\x64\Debug\glew32.dll
