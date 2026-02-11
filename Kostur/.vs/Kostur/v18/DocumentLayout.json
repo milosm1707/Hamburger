@@ -1,25 +1,25 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\",
+  "WorkspaceRootPath": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|solutionrelative:Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Shaders\\basic.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Shaders\\basic.frag||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|solutionrelative:Shaders\\basic.frag||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Shaders\\basic.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Shaders\\basic.vert||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|solutionrelative:Shaders\\basic.vert||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Source\\Util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Source\\Util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|solutionrelative:Source\\Util.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Header\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|solutionrelative:Source\\Main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Header\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{6EECF44A-001F-42A3-91F3-62168F9E8C1D}|Kostur.vcxproj|solutionrelative:Header\\Util.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -30,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 315,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,37 +38,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "basic.vert",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Shaders\\basic.vert",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Shaders\\basic.vert",
               "RelativeDocumentMoniker": "Shaders\\basic.vert",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Shaders\\basic.vert",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Shaders\\basic.vert",
               "RelativeToolTip": "Shaders\\basic.vert",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-11T01:15:09.824Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "basic.frag",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Shaders\\basic.frag",
-              "RelativeDocumentMoniker": "Shaders\\basic.frag",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Shaders\\basic.frag",
-              "RelativeToolTip": "Shaders\\basic.frag",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-12-11T01:15:04.727Z"
+              "WhenOpened": "2025-12-11T01:15:09.824Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "basic.frag",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Shaders\\basic.frag",
+              "RelativeDocumentMoniker": "Shaders\\basic.frag",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Shaders\\basic.frag",
+              "RelativeToolTip": "Shaders\\basic.frag",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAUwBgAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-12-11T01:15:04.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Main.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Source\\Main.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Source\\Main.cpp",
               "RelativeDocumentMoniker": "Source\\Main.cpp",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Source\\Main.cpp",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Source\\Main.cpp",
               "RelativeToolTip": "Source\\Main.cpp",
-              "ViewState": "AgIAANsAAAAAAAAAAAAkwPQAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAKMBAAAAAAAAAAAowLoBAABOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-12-11T00:21:14.092Z",
               "EditorCaption": ""
@@ -77,9 +79,9 @@
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Util.h",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Header\\Util.h",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Header\\Util.h",
               "RelativeDocumentMoniker": "Header\\Util.h",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Header\\Util.h",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Header\\Util.h",
               "RelativeToolTip": "Header\\Util.h",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
@@ -87,15 +89,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Util.cpp",
-              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Source\\Util.cpp",
+              "DocumentMoniker": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Source\\Util.cpp",
               "RelativeDocumentMoniker": "Source\\Util.cpp",
-              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\Kostur\\Source\\Util.cpp",
+              "ToolTip": "C:\\Users\\hp\\Desktop\\faks\\IV godina\\racunarska_grafika\\Vezbe\\kostur\\k\\git\\Hamburger\\Kostur\\Source\\Util.cpp",
               "RelativeToolTip": "Source\\Util.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFcAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAGsAAAAAAAAAAAAowIIAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-12-11T00:21:14.099Z"
+              "WhenOpened": "2025-12-11T00:21:14.099Z",
+              "EditorCaption": ""
             }
           ]
         }

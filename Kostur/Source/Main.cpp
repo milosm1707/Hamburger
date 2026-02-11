@@ -2,6 +2,8 @@
 #include <GLFW/glfw3.h>
 #include <cmath>
 #include "../Header/Util.h"
+#include <vector>
+#include <cctype>
 
 enum GameState { MENU, COOKING, ASSEMBLING, FINISHED };
 enum Ingredient { BUN_BOT, PATTY, KETCHUP, MUSTARD, PICKLE, ONION, LETTUCE, CHEESE, TOMATO, BUN_TOP, ING_COUNT };
@@ -25,7 +27,29 @@ int puddleCount = 0;
 
 unsigned tButton, tStove, tTable, tPlate, tPatty;
 unsigned tBunBot, tBunTop, tKetchup, tMustard, tPickle, tOnion, tLettuce, tCheese, tTomato;
-unsigned tKetchupBot, tMustardBot, tWaste, tDone, shader;
+unsigned tKetchupBot, tMustardBot, tWaste, tDone, shader, tStudentInfo;
+unsigned quadVAO = 0, quadVBO = 0;
+
+void initQuad() {
+    if (quadVAO != 0) return;
+
+    glGenVertexArrays(1, &quadVAO);
+    glGenBuffers(1, &quadVBO);
+    glBindVertexArray(quadVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, quadVBO);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(float) * 16, nullptr, GL_DYNAMIC_DRAW);
+    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
+    glEnableVertexAttribArray(0);
+    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
+    glEnableVertexAttribArray(1);
+}
+
+void shutdownQuad() {
+    if (quadVBO != 0) glDeleteBuffers(1, &quadVBO);
+    if (quadVAO != 0) glDeleteVertexArrays(1, &quadVAO);
+    quadVBO = 0;
+    quadVAO = 0;
+}
 
 void loadTex(unsigned& tex, const char* path) {
     tex = loadImageToTexture(path);
@@ -70,18 +94,14 @@ void move(GLFWwindow* win, float& x, float& y) {
 }
 
 void drawQ(unsigned s, unsigned tex, float x, float y, float w, float h, float r, float g, float b, float a, bool flip = false) {
+    initQuad();
+
     float t1 = flip ? 1.0f : 0.0f, t2 = flip ? 0.0f : 1.0f;
     float v[] = { x - w,y + h,0,t1, x - w,y - h,0,t2, x + w,y - h,1,t2, x + w,y + h,1,t1 };
-    unsigned VAO, VBO;
-    glGenVertexArrays(1, &VAO);
-    glGenBuffers(1, &VBO);
-    glBindVertexArray(VAO);
-    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-    glBufferData(GL_ARRAY_BUFFER, sizeof(v), v, GL_STATIC_DRAW);
-    glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), 0);
-    glEnableVertexAttribArray(0);
-    glVertexAttribPointer(1, 2, GL_FLOAT, GL_FALSE, 4 * sizeof(float), (void*)(2 * sizeof(float)));
-    glEnableVertexAttribArray(1);
+
+    glBindVertexArray(quadVAO);
+    glBindBuffer(GL_ARRAY_BUFFER, quadVBO);
+    glBufferSubData(GL_ARRAY_BUFFER, 0, sizeof(v), v);
 
     glUseProgram(s);
     glUniform4f(glGetUniformLocation(s, "uColor"), r, g, b, a);
@@ -101,10 +121,9 @@ void drawQ(unsigned s, unsigned tex, float x, float y, float w, float h, float r
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, t);
     glUniform1i(glGetUniformLocation(s, "uTex"), 0);
-    glBindVertexArray(VAO);
+    glBindVertexArray(quadVAO);
     glDrawArrays(GL_TRIANGLE_FAN, 0, 4);
-    glDeleteBuffers(1, &VBO);
-    glDeleteVertexArrays(1, &VAO);
+
     if (dummy) glDeleteTextures(1, &t);
 }
 
@@ -112,6 +131,94 @@ void drawBar(unsigned s, float prog) {
     drawQ(s, 0, 0.0f, 0.85f, 0.5f, 0.06f, 0.3f, 0.3f, 0.3f, 1.0f);
     float w = 0.5f * prog;
     drawQ(s, 0, -0.5f + w, 0.85f, w, 0.055f, 0.0f, 0.8f, 0.0f, 1.0f);
+}
+
+int studentTexW = 0, studentTexH = 0;
+float studentW = 0.0f, studentH = 0.0f;
+
+const unsigned char* getGlyph(char c) {
+    static const unsigned char space[7] = { 0,0,0,0,0,0,0 };
+    static const unsigned char A[7] = { 0x0E,0x11,0x11,0x1F,0x11,0x11,0x11 };
+    static const unsigned char C[7] = { 0x0E,0x11,0x10,0x10,0x10,0x11,0x0E };
+    static const unsigned char E[7] = { 0x1F,0x10,0x10,0x1E,0x10,0x10,0x1F };
+    static const unsigned char I[7] = { 0x1F,0x04,0x04,0x04,0x04,0x04,0x1F };
+    static const unsigned char J[7] = { 0x07,0x02,0x02,0x02,0x02,0x12,0x0C };
+    static const unsigned char L[7] = { 0x10,0x10,0x10,0x10,0x10,0x10,0x1F };
+    static const unsigned char M[7] = { 0x11,0x1B,0x15,0x11,0x11,0x11,0x11 };
+    static const unsigned char O[7] = { 0x0E,0x11,0x11,0x11,0x11,0x11,0x0E };
+    static const unsigned char S[7] = { 0x0F,0x10,0x10,0x0E,0x01,0x01,0x1E };
+    static const unsigned char V[7] = { 0x11,0x11,0x11,0x11,0x11,0x0A,0x04 };
+    static const unsigned char zero[7] = { 0x0E,0x11,0x13,0x15,0x19,0x11,0x0E };
+    static const unsigned char two[7] = { 0x0E,0x11,0x01,0x02,0x04,0x08,0x1F };
+    static const unsigned char eight[7] = { 0x0E,0x11,0x11,0x0E,0x11,0x11,0x0E };
+    static const unsigned char slash[7] = { 0x01,0x02,0x04,0x08,0x10,0x00,0x00 };
+
+    c = static_cast<char>(std::toupper(static_cast<unsigned char>(c)));
+    switch (c) {
+    case 'A': return A;
+    case 'C': return C;
+    case 'E': return E;
+    case 'I': return I;
+    case 'J': return J;
+    case 'L': return L;
+    case 'M': return M;
+    case 'O': return O;
+    case 'S': return S;
+    case 'V': return V;
+    case '0': return zero;
+    case '2': return two;
+    case '8': return eight;
+    case '/': return slash;
+    case ' ': return space;
+    default: return space;
+    }
+}
+
+unsigned int createTextTexture(const char* text, int scale, int padding, int& outW, int& outH) {
+    const int glyphW = 5;
+    const int glyphH = 7;
+    int len = static_cast<int>(std::strlen(text));
+
+    outW = len * (glyphW * scale + padding) - padding;
+    outH = glyphH * scale;
+
+    std::vector<unsigned char> pixels(outW * outH * 4, 0);
+
+    for (int i = 0; i < len; i++) {
+        const unsigned char* glyph = getGlyph(text[i]);
+        int baseX = i * (glyphW * scale + padding);
+
+        for (int y = 0; y < glyphH; y++) {
+            for (int x = 0; x < glyphW; x++) {
+                bool on = (glyph[y] & (1 << (glyphW - 1 - x))) != 0;
+                if (!on) continue;
+
+                for (int sy = 0; sy < scale; sy++) {
+                    for (int sx = 0; sx < scale; sx++) {
+                        int px = baseX + x * scale + sx;
+                        int py = y * scale + sy;
+                        int idx = (py * outW + px) * 4;
+
+                        pixels[idx + 0] = 255;
+                        pixels[idx + 1] = 255;
+                        pixels[idx + 2] = 255;
+                        pixels[idx + 3] = 255;
+                    }
+                }
+            }
+        }
+    }
+
+    unsigned int tex = 0;
+    glGenTextures(1, &tex);
+    glBindTexture(GL_TEXTURE_2D, tex);
+    glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, outW, outH, 0, GL_RGBA, GL_UNSIGNED_BYTE, pixels.data());
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+    return tex;
 }
 
 int main() {
@@ -161,6 +268,10 @@ int main() {
     shader = createShader("Shaders/basic.vert", "Shaders/basic.frag");
     for (int i = 0; i < 20; i++) puddles[i].active = false;
     glClearColor(0.85f, 0.9f, 0.95f, 1.0f);
+
+    tStudentInfo = createTextTexture("Milos Milosavljevic SV80/2022", 3, 2, studentTexW, studentTexH);
+    studentW = studentTexW / static_cast<float>(scrW);
+    studentH = studentTexH / static_cast<float>(scrH);
 
     while (!glfwWindowShouldClose(win)) {
         glClear(GL_COLOR_BUFFER_BIT);
@@ -271,9 +382,16 @@ int main() {
                 drawQ(shader, sTex, fallX, fallY, 0.04f, 0.02f, 1, 1, 1, 1);
 
                 bool overPlateX = (fallX > -0.25f && fallX < 0.25f);
+                bool overWasteX = (fallX > 0.45f && fallX < 0.75f);
                 if (fallY <= -0.3f) {
                     if (overPlateX) {
                         inBurger[curIng] = true;
+                        processed++;
+                        curIng++;
+                    }
+                    else if (overWasteX) {
+                        processed++;
+                        curIng++;
                     }
                     else {
                         if (puddleCount < 20) {
@@ -285,8 +403,6 @@ int main() {
                         }
                     }
                     falling = false;
-                    processed++;
-                    curIng++;
                     ingX = 0.0f; ingY = 0.6f;
                 }
             }
@@ -314,12 +430,14 @@ int main() {
             drawQ(shader, tDone, 0, 0.6f, 0.25f, 0.25f, 1, 1, 1, 1);
         }
 
+        drawQ(shader, tStudentInfo, 0.75f, 0.85f, studentW, studentH, 0.6f, 0.85f, 1.0f, 0.7f);
         glfwSwapBuffers(win);
         glfwPollEvents();
     }
 
+    shutdownQuad();
     glDeleteProgram(shader);
     glfwDestroyWindow(win);
     glfwTerminate();
     return 0;
-}
+}/*#########################################################################*/

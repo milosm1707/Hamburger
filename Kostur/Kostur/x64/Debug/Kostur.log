@@ -1,4 +1,7 @@
 ﻿  Main.cpp
-C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\Kostur\Source\Main.cpp(44,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\Kostur\Source\Main.cpp(44,43): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
-  Kostur.vcxproj -> C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\Kostur\x64\Debug\Kostur.exe
+C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\git\Hamburger\Kostur\Source\Main.cpp(68,18): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\git\Hamburger\Kostur\Source\Main.cpp(68,43): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+  Util.cpp
+  Generating Code...
+  LINK : C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\git\Hamburger\Kostur\x64\Debug\Kostur.exe not found or not built by the last incremental link; performing full link
+  Kostur.vcxproj -> C:\Users\hp\Desktop\faks\IV godina\racunarska_grafika\Vezbe\kostur\k\git\Hamburger\Kostur\x64\Debug\Kostur.exe
