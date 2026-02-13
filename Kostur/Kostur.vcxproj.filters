@@ -16,6 +16,9 @@
     <Filter Include="Shaders">
       <UniqueIdentifier>{40da6231-6714-40cc-bd17-78eb657388a3}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Resource Files\models">
+      <UniqueIdentifier>{72f6f72b-bae0-4292-91e7-5f15a1461a69}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Main.cpp">
@@ -41,11 +44,10 @@
     <None Include="Shaders\basic.vert">
       <Filter>Shaders</Filter>
     </None>
+    <None Include="Shaders\basic3d.vert" />
+    <None Include="Shaders\basic3d.frag" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\bun_bottom.png">
-      <Filter>Resource Files</Filter>
-    </Image>
     <Image Include="res\bun_top.png">
       <Filter>Resource Files</Filter>
     </Image>
@@ -93,6 +95,12 @@
     </Image>
     <Image Include="res\tomato.png">
       <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="..\..\..\obj\source\bun_bottom.png">
+      <Filter>Resource Files\models</Filter>
+    </Image>
+    <Image Include="..\..\..\obj\topb\source\bun_top.jpg">
+      <Filter>Resource Files\models</Filter>
     </Image>
   </ItemGroup>
 </Project>

@@ -136,9 +136,12 @@
     <None Include="packages.config" />
     <None Include="Shaders\basic.frag" />
     <None Include="Shaders\basic.vert" />
+    <None Include="Shaders\basic3d.frag" />
+    <None Include="Shaders\basic3d.vert" />
   </ItemGroup>
   <ItemGroup>
-    <Image Include="res\bun_bottom.png" />
+    <Image Include="..\..\..\obj\source\bun_bottom.png" />
+    <Image Include="..\..\..\obj\topb\source\bun_top.jpg" />
     <Image Include="res\bun_top.png" />
     <Image Include="res\button.png" />
     <Image Include="res\cheese.png" />
