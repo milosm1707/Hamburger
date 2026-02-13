@@ -350,7 +350,7 @@ void keyPress(GLFWwindow* win, int key, int sc, int act, int mods) {
 bool loadModel(const char* objPath, const char* texPath, Model& model, const Mesh& fallback) {
     std::vector<Vertex3D> verts;
     if (loadObjMesh(objPath, verts)) {
-        model.mesh = createMesh(verts); model.ownsMesh = true;
+        model.mesh = createMesh  (verts); model.ownsMesh = true;
         if (texPath) { model.texture = loadImageToTexture(texPath); model.useTexture = model.texture != 0; }
         return true;
     }
